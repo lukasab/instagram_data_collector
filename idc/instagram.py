@@ -48,7 +48,6 @@ class Instagram:
         instagram_passwoard_input_path = '/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input'
         instagram_btn_path = '/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[3]/button'
         self._fill_user_pass(instagram_username_input_path, instagram_passwoard_input_path, instagram_btn_path)   
-        
 
     def log_in(self, is_facebook: bool = False, is_two_factor: bool = False) -> None:
         cookie_btn = self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/button[1]')
@@ -60,3 +59,15 @@ class Instagram:
             self._log_in_instagram()
         notification_btn = self.driver.find_element_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]')
         notification_btn.click()
+
+    def enter_profile(self, user_name: str = '', self_profile: bool = False):
+        if self_profile:
+            img_btn = self.driver.find_element_by_xpath('/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/span/img')
+            img_btn.click()
+            sleep(0.1)
+            profile_btn = self.driver.find_element_by_xpath('/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/a[1]/div')
+            profile_btn.click()
+        else:
+            self.driver.get('https://instagram.com/{}'.format(user_name))
+        sleep(2.5)
+       

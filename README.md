@@ -4,7 +4,7 @@
 
 - [X] :computer: Create driver class
 - [X] :computer: Create log-in function
-- [ ] :computer: Create enter profile function
+- [X] :computer: Create enter profile function
 - [ ] :computer: Create open follower and following list function
 - [ ] :computer: Create retrieve user name function
 - [ ] :computer: Create scroll down list function
