@@ -2,8 +2,8 @@
 
 ## To-do
 
-- [ ] :computer: Create driver class
-- [ ] :computer: Create log-in function
+- [X] :computer: Create driver class
+- [X] :computer: Create log-in function
 - [ ] :computer: Create enter profile function
 - [ ] :computer: Create open follower and following list function
 - [ ] :computer: Create retrieve user name function
